@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Design</title>
+
+  <style>
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body{
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+
+    .card{
+      width: 300px;
+      height: 420px;
+      border: 2px solid black;
+      border-radius: 10px;
+      margin: 50px auto;
+      background-color: white;
+      position: relative;
+    }
+
+    .top{
+      width: 100%;
+      height: 220px;
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiOC9-L4wvtzORlEiRcIul0G-vNR7PDj-F3g&s');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      border-bottom: 2px solid black;
+    }
+
+    .tag{
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      border: 1px solid black;
+      padding: 5px 12px;
+      background-color: white;
+    }
+
+    .heart{
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background-color: white;
+      text-align: center;
+      line-height: 35px;
+      font-size: 20px;
+    }
+
+    .bottom{
+      padding: 20px;
+    }
+
+    .bottom h2{
+      margin-bottom: 15px;
+    }
+
+    .price{
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .btn{
+      width: 140px;
+      height: 40px;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+
+    <div class="top">
+
+      <div class="tag">Sale</div>
+
+      <div class="heart">❤</div>
+
+    </div>
+
+    <div class="bottom">
+
+      <h2>PentHouse</h2>
+      <p>This Penthouse is on sale.</p>
+
+      <p class="price">₹4500000</p>
+
+      <button class="btn">Add to Cart</button>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

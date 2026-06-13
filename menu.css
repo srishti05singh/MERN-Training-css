@@ -1,0 +1,148 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#111;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+.container{
+    width:1000px;
+    height:900px;
+    display:flex;
+    overflow:hidden;
+}
+
+
+.left-panel{
+    flex:1;
+    padding:35px;
+    color:white;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,0.88),
+    rgba(0,0,0,0.88)),
+    url("https://images.unsplash.com/photo-1447933601403-0c6688de566e");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.left-panel h1{
+    font-size:50px;
+    margin-bottom:25px;
+}
+
+.section{
+    margin-bottom:20px;
+    padding-bottom:15px;
+    border-bottom:1px solid #555;
+}
+
+.section h2{
+    color:#d8a14a;
+    margin-bottom:12px;
+    font-size:22px;
+}
+
+.item{
+    display:flex;
+    justify-content:space-between;
+    margin:8px 0;
+}
+
+
+
+.right-panel{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+}
+
+.top-image{
+    flex:5;
+
+    background-image:url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085");
+    background-size:cover;
+    background-position:center;
+}
+
+.order-box{
+    flex:2;
+    background:#111;
+    color:white;
+
+    display:flex;
+    align-items:center;
+    gap:20px;
+    padding:25px;
+}
+
+.qr-box{
+    width:120px;
+    height:120px;
+    border:3px solid #d8a14a;
+    padding:5px;
+}
+
+.qr-box img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.order-text h2{
+    color:#d8a14a;
+    margin-bottom:10px;
+    font-size:30px;
+}
+
+.order-text p{
+    line-height:1.6;
+}
+
+.bottom-image{
+    flex:3;
+
+    background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLBgj2HjpPDPyFU0Ke3lm9hKdmzmQZsQHqaw&s");
+    background-size:cover;
+    background-position:center;
+}
+
+
+@media(max-width:768px){
+
+    .container{
+        flex-direction:column;
+        width:100%;
+        height:auto;
+    }
+
+    .top-image{
+        height:300px;
+        flex:none;
+    }
+
+    .bottom-image{
+        height:250px;
+        flex:none;
+    }
+
+    .order-box{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .left-panel h1{
+        font-size:40px;
+    }
+}
