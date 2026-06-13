@@ -1,0 +1,163 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.navbar{
+    width:100%;
+    height:50px;
+    border:3px solid #cb1a1a;
+
+    display:flex;
+    align-items:center;
+    padding:0 20px;
+    gap:20px;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+}
+
+.search{
+    flex:1; 
+}
+
+.search input{
+    width:100%;
+    height:40px;
+    padding-left:15px;
+    border:1px solid #ccc;
+    border-radius:4px;
+}
+
+.location{
+    font-size:18px;
+}
+
+.signin button{
+    padding:8px 15px;
+    border:none;
+    background:#f84464;
+    color:white;
+    border-radius:4px;
+    cursor:pointer;
+}
+
+.threeline{
+    text-decoration:none;
+    color:black;
+}
+
+.menu {
+    background: lightblue;
+    display: flex;
+    justify-content: space-between; 
+    padding: 15px 50px;
+    border-top: 1px solid #eee;
+}
+
+.menu-left, .menu-right {
+    display: flex;
+    gap: 30px;
+}
+
+.banner{
+    width:90%;
+    height:350px;
+    margin:20px auto;
+    background:url("https://thfvnext.bing.com/th/id/OIP.eCq86B1SuQU44wdHoAHymAHaEK?w=298&h=180&c=7&r=0&o=7&cb=thfvnextfalcon&dpr=1.3&pid=1.7&rm=3")
+    center/cover;
+    border-radius:10px;
+}
+.section{
+    width:90%;
+    margin:auto;
+}
+
+.section h2{
+    margin-bottom:20px;
+}
+
+.movies{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:220px;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+.movie-info{
+    background:black;
+    color:white;
+    padding:10px;
+    font-size:16px;
+    font-weight:bold;
+}
+
+.card-content{
+    padding:10px;
+}
+
+.card-content h3{
+    margin-bottom:5px;
+}
+
+.card-content p{
+    color:gray;
+}
+
+.footer{
+    width:100%;
+    background-color:#000;
+    color:white;
+    padding:20px 40px;
+    margin-top:40px;
+}
+
+.footer-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.footer-left h3{
+    color:#f84464;
+    margin-bottom:5px;
+}
+
+.footer-left p{
+    color:white;
+}
+
+.footer-right{
+    display:flex;
+    gap:15px;
+}
+
+.footer-right a{
+    text-decoration:none;
+    color:white;
+    border:1px solid white;
+    padding:8px 12px;
+    border-radius:5px;
+}
+
+.footer-right a:hover{
+    background:#f84464;
+    border-color:#f84464;
+}

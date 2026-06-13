@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexbox Website</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+.navbar{
+    background:#dff7ef;
+    padding:15px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:black;
+}
+
+/* HERO */
+.hero{
+    flex:1;
+    background:#222;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-align:center;
+
+    position:relative; /* IMPORTANT for chatbox */
+    padding:30px;
+}
+
+.hero h1{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    margin-bottom:20px;
+    color:#ccc;
+}
+footer{
+    background: lightblue;
+    color: black;
+    text-align: center;
+    padding: 20px;
+}
+
+.chatbox{
+    position:absolute;
+    right:20px;
+    bottom:20px;
+
+    background:white;
+    color:black;
+    padding:10px 16px;
+    border-radius:20px;
+    cursor:pointer;
+    font-size:14px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.3);
+    transition:0.2s;
+}
+
+.chatbox:hover{
+    background:#ddd;
+}
+</style>
+
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">Study Point</div>
+
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Course</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <h1>Welcome to the website</h1>
+    <p>Enroll for the course according to your interest. We provide lots of courses in budget</p>
+
+    <div class="chatbox">
+        💬 Chat
+    </div>
+</section>
+<footer>
+    <p>Study Point. All right reserved.</p>
+</footer>
+
+</body>
+</html>

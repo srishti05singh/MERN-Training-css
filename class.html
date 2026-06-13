@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --primary: red;
+            --secondary: black;
+        }
+        .parent{
+            width: 500px;
+            height: 300px;
+            background-color: var(--my-var, #eee);
+
+        }
+        .child{
+            --my-var: red;
+        }
+        h3{
+            padding: 20px;
+            background-color: var(--my-var);
+        }
+        h2{
+            padding: 10px;
+            background-color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <h2>Batch 07</h2>
+        <div class="child">
+            <h3>MEARN Class</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis tempora, alias modi obcaecati libero debitis quia possimus eveniet itaque consectetur, ut laboriosam illo aperiam, officiis molestiae magni architecto inventore eaque.</p>
+
+        </div>
+    </div>
+</body>
+</html>
