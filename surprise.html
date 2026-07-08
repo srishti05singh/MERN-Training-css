@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hug Me Girl</title>
+
+<style>
+
+body{
+    height:100vh;
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#ffddea;
+    font-family:Arial;
+}
+
+
+.container{
+    text-align:center;
+}
+
+
+.girl{
+    cursor:pointer;
+}
+
+
+/* face */
+
+.face{
+    width:100px;
+    height:100px;
+    background:#ffd0ad;
+    border-radius:50%;
+    margin:auto;
+    position:relative;
+}
+
+
+.hair{
+    position:absolute;
+    width:110px;
+    height:70px;
+    background:#3a1b10;
+    border-radius:60px 60px 30px 30px;
+    top:-25px;
+    left:-5px;
+}
+
+
+.eyes{
+    position:absolute;
+    top:45px;
+    left:30px;
+    font-size:25px;
+}
+
+
+/* dress */
+
+.dress{
+    width:130px;
+    height:150px;
+    background:#ff69a6;
+    margin:auto;
+    border-radius:40px 40px 20px 20px;
+    position:relative;
+}
+
+
+
+/* arms */
+
+.arm{
+    width:110px;
+    height:20px;
+    background:#ffd0ad;
+    border-radius:30px;
+    position:absolute;
+    top:45px;
+    transition:0.7s;
+}
+
+
+.arm1{
+    left:-90px;
+    transform:rotate(20deg);
+}
+
+
+.arm2{
+    right:-90px;
+    transform:rotate(-20deg);
+}
+
+
+
+/* legs */
+
+.leg{
+    width:20px;
+    height:70px;
+    background:#333;
+    display:inline-block;
+    margin:15px;
+    border-radius:20px;
+}
+
+
+
+/* hug */
+
+.hug .arm1{
+    left:20px;
+    transform:rotate(130deg);
+}
+
+
+.hug .arm2{
+    right:20px;
+    transform:rotate(-130deg);
+}
+
+
+
+.hug{
+    animation:heart 1s infinite;
+}
+
+
+
+@keyframes heart{
+
+    50%{
+        filter:drop-shadow(0 0 25px pink);
+        transform:scale(1.05);
+    }
+
+}
+
+
+
+.text{
+    margin-top:20px;
+    font-size:22px;
+    color:#555;
+}
+
+
+.after{
+    display:none;
+    color:#ff1493;
+    font-size:30px;
+    font-weight:bold;
+    margin-top:20px;
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<div class="girl" onclick="hugMe()">
+
+
+<div class="face">
+
+<div class="hair"></div>
+
+<div class="eyes">
+
+</div>
+
+</div>
+
+
+
+<div class="dress">
+
+
+<div class="arm arm1"></div>
+
+<div class="arm arm2"></div>
+
+
+</div>
+
+
+<div>
+
+<div class="leg"></div>
+<div class="leg"></div>
+
+</div>
+
+
+</div>
+
+
+
+<div class="text" id="text">
+
+I need therapy 🥺<br>
+Please tap me once 🤍
+
+</div>
+
+
+<div class="after" id="after">
+
+Thank you 🫶<br>
+I love you baby ❤️
+
+</div>
+
+
+
+</div>
+
+
+
+
+<script>
+
+function hugMe(){
+
+let girl=document.querySelector(".girl");
+
+girl.classList.add("hug");
+
+
+document.getElementById("text").style.display="none";
+
+
+document.getElementById("after").style.display="block";
+
+
+}
+
+</script>
+
+
+</body>
+</html>

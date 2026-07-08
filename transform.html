@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Rotate Examples</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:30px;
+    justify-content:center;
+}
+
+.box{
+    width:120px;
+    height:120px;
+    background:royalblue;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:10px;
+    transition:0.5s;
+    font-weight:bold;
+}
+
+/* Rotate 45 Degrees */
+.rotate45{
+    transform:rotate(45deg);
+}
+
+/* Rotate -45 Degrees */
+.rotateMinus45{
+    transform:rotate(-45deg);
+}
+
+/* Rotate 90 Degrees */
+.rotate90{
+    transform:rotate(90deg);
+}
+
+/* Rotate 180 Degrees */
+.rotate180{
+    transform:rotate(180deg);
+}
+
+/* Rotate on Hover */
+.hoverRotate:hover{
+    transform:rotate(360deg);
+}
+
+/* Continuous Rotation */
+.spin{
+    animation:spin 2s linear infinite;
+}
+
+@keyframes spin{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="box rotate45">45°</div>
+
+    <div class="box rotateMinus45">-45°</div>
+
+    <div class="box rotate90">90°</div>
+
+    <div class="box rotate180">180°</div>
+
+    <div class="box hoverRotate">Hover</div>
+
+    <div class="box spin">Spin</div>
+
+</div>
+
+</body>
+</html>

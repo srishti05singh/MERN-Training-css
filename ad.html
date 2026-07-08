@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+    font-family: Arial, sans-serif;
+}
+
+button{
+    background: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    background: red;
+}
+
+button:active{
+    transform: scale(0.9);
+}
+
+input{
+    padding: 10px;
+    margin-top: 20px;
+    border: 2px solid rgb(222, 14, 14);
+}
+
+input:focus{
+    border-color: green;
+    outline: none;
+}
+
+li:first-child{
+    color: red;
+}
+
+li:last-child{
+    color: blue;
+}
+
+li:nth-child(2){
+    color: green;
+}
+    </style>
+</head>
+    <body>
+        
+<button>Hover & Click Me</button>
+
+<br><br>
+
+<input type="text" placeholder="Enter your name">
+
+<ul>
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Mango</li>
+</ul>
+    </body>
+</html>

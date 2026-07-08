@@ -1,0 +1,225 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+/* Sidebar */
+.sidebar{
+    width:250px;
+    background:#111827;
+    color:white;
+    padding:20px;
+}
+
+.sidebar h2{
+    margin-bottom:30px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar li{
+    padding:15px 10px;
+    margin-bottom:10px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.sidebar li:hover{
+    background:#374151;
+}
+
+/* Main Content */
+.main-content{
+    flex:1;
+    padding:20px;
+}
+
+header{
+    margin-bottom:20px;
+}
+
+/* Cards */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card h3{
+    color:#666;
+    margin-bottom:10px;
+}
+
+.card p{
+    font-size:28px;
+    font-weight:bold;
+}
+/* Analytics Section */
+.analytics-section{
+    background:white;
+    margin-top:30px;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.analytics-section h2{
+    margin-bottom:20px;
+    color:#111827;
+}
+
+.chart-area{
+    height:320px;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:flex-end;
+    border-left:2px solid #ddd;
+    border-bottom:2px solid #ddd;
+    padding:20px;
+}
+
+.bar-group{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.bar{
+    width:50px;
+    background:linear-gradient(to top,#4f46e5,#8b5cf6);
+    border-radius:10px 10px 0 0;
+    transition:0.3s;
+}
+
+.bar:hover{
+    transform:scaleY(1.08);
+    cursor:pointer;
+}
+
+.bar-group span{
+    margin-top:10px;
+    font-weight:600;
+    color:#555;
+}
+/* Traffic Sources */
+.traffic-section{
+    background:white;
+    margin-top:30px;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.traffic-section h2{
+    margin-bottom:20px;
+}
+
+.source{
+    margin-bottom:20px;
+}
+
+.source-info{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.progress{
+    width:100%;
+    height:12px;
+    background:#e5e7eb;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress-bar{
+    height:100%;
+    border-radius:20px;
+}
+
+.google{
+    width:45%;
+    background:#4f46e5;
+}
+
+.direct{
+    width:30%;
+    background:#06b6d4;
+}
+
+.social{
+    width:15%;
+    background:#10b981;
+}
+
+.referral{
+    width:10%;
+    background:#f59e0b;
+}
+
+.Monthly Revenue{
+    background:white;
+    margin-top:30px;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.Monthly Revenue h2{
+    margin-bottom:20px;
+}
+
+.Goals{
+    margin-bottom:20px;
+}
+.Goals-info{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:8px;
+    font-weight:600;
+}
+.progress{
+    width:100%;
+    height:12px;
+    background:#e5e7eb;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress-bar{
+    height:100%;
+    border-radius:20px;
+}
+.Monthly Revenue{
+    width: 45%;
+    background-color: #06b6d4;
+}
+.New Customer{
+    width: 25%;
+    background-color: #10b981;
+}
+.Conversion Rate{
+    width: 10%;
+    background-color: #4f46e5;
+}

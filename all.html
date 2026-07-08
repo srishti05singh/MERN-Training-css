@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Complete Practice</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    padding:30px;
+}
+
+h1{
+    text-align:center;
+    margin:20px 0;
+}
+
+/* ---------------- Pseudo Classes ---------------- */
+
+.btn{
+    padding:12px 25px;
+    background:royalblue;
+    color:white;
+    border:none;
+    cursor:pointer;
+    transition:.4s;
+}
+
+.btn:hover{
+    background:red;
+}
+
+.btn:active{
+    transform:scale(.9);
+}
+
+input{
+    width:250px;
+    padding:10px;
+    margin:15px 0;
+    border:2px solid gray;
+}
+
+input:focus{
+    border-color:green;
+    outline:none;
+}
+
+ul{
+    margin-left:30px;
+}
+
+li:first-child{
+    color:red;
+}
+
+li:last-child{
+    color:blue;
+}
+
+li:nth-child(2){
+    color:green;
+}
+
+/* ---------------- Pseudo Elements ---------------- */
+
+.para::before{
+    content:"👉 ";
+    color:orange;
+}
+
+.para::after{
+    content:" ✔";
+    color:green;
+}
+
+.para::first-letter{
+    font-size:40px;
+    color:red;
+}
+
+.para::first-line{
+    font-weight:bold;
+}
+
+::selection{
+    background:black;
+    color:white;
+}
+
+input::placeholder{
+    color:purple;
+}
+
+li::marker{
+    color:orange;
+}
+
+/* ---------------- Transform ---------------- */
+
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    margin-top:30px;
+}
+
+.box{
+    width:120px;
+    height:120px;
+    background:royalblue;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:10px;
+    transition:.5s;
+}
+
+.translate:hover{
+    transform:translate(20px,-20px);
+}
+
+.rotate:hover{
+    transform:rotate(45deg);
+}
+
+.scale:hover{
+    transform:scale(1.2);
+}
+
+.skew:hover{
+    transform:skew(20deg);
+}
+
+.combine:hover{
+    transform:translate(15px,-15px) rotate(20deg) scale(1.2);
+}
+
+/* ---------------- Animation ---------------- */
+
+.square{
+    width:350px;
+    height:350px;
+    border:4px solid black;
+    margin:50px auto;
+    position:relative;
+
+    /* Desktop distance */
+    --distance:280px;
+}
+
+.move{
+    width:70px;
+    height:70px;
+    background:red;
+    position:absolute;
+    animation:moveBox 8s linear infinite;
+}
+
+@keyframes moveBox{
+
+    0%{
+        top:0;
+        left:0;
+    }
+
+    25%{
+        top:0;
+        left:var(--distance);
+    }
+
+    50%{
+        top:var(--distance);
+        left:var(--distance);
+    }
+
+    75%{
+        top:var(--distance);
+        left:0;
+    }
+
+    100%{
+        top:0;
+        left:0;
+    }
+}
+
+/* ---------------- Tablet ---------------- */
+
+@media (max-width:992px){
+
+    body{
+        padding:20px;
+    }
+
+    .container{
+        justify-content:center;
+    }
+
+    .square{
+        width:300px;
+        height:300px;
+        --distance:240px;
+    }
+
+    .move{
+        width:60px;
+        height:60px;
+    }
+}
+
+/* ---------------- Mobile ---------------- */
+
+@media (max-width:600px){
+
+    body{
+        padding:15px;
+    }
+
+    .container{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .box{
+        width:180px;
+        height:80px;
+    }
+
+    input{
+        width:100%;
+    }
+
+    .square{
+        width:250px;
+        height:250px;
+        --distance:200px;
+    }
+
+    .move{
+        width:50px;
+        height:50px;
+    }
+
+    h1{
+        font-size:24px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<h1>Pseudo Classes</h1>
+
+<button class="btn">Hover Me</button>
+
+<br><br>
+
+<input type="text" placeholder="Enter your name">
+
+<ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ul>
+
+<hr><br>
+
+<h1>Pseudo Elements</h1>
+
+<p class="para">
+    Learning CSS is fun. Pseudo elements allow you to style specific parts of an element without adding extra HTML.
+</p>
+
+<hr><br>
+
+<h1>Transform Properties</h1>
+
+<div class="container">
+    <div class="box translate">Translate</div>
+    <div class="box rotate">Rotate</div>
+    <div class="box scale">Scale</div>
+    <div class="box skew">Skew</div>
+    <div class="box combine">Combine</div>
+</div>
+
+<hr><br>
+
+<h1>Animation</h1>
+
+<div class="square">
+    <div class="move"></div>
+</div>
+
+</body>
+</html>
